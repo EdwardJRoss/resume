@@ -1,0 +1,179 @@
+% Name and contact information
+\def\name{Edward Ross}
+\def\addrone{}
+\def\addrtwo{}
+\def\phone{0403 995 808}
+%Note cmr10 @ symbol looks funny; sits too high.
+\def\email{eddington.ross@gmail.com}
+
+%Font choices
+\font\bf = cmbx10 at 14pt
+\font\it = cmti10 at 14pt
+\font\smallit = cmti10 at 10pt
+\font\rm = cmr10 at 14pt
+
+\def\nameReference#1{{\it #1}}
+
+\font\titleFont = pplrc at 24pt
+\font\headFont = pplbc8z at 18pt
+\font\infoFont = pagk8z at 12pt
+\font\sectionFont = ptmb8z at 16pt
+
+
+\parskip=0pt
+\parindent=0pt
+\hyphenpenalty5000
+\brokenpenalty10000
+
+%A type of section heading: e.g Skills, Experience, Education
+\def\head#1{\vskip2pt\hfil\headFont #1\hfill\vskip3pt}
+
+%For skills
+\def\startSkill{\relax}
+\def\skill#1{\rm {\vskip10pt {\sectionFont #1}}\vskip6pt}
+\def\endSkill{\relax}
+
+%For education/academics: Bulleted lists
+%Diamond sits a bit low so raise it
+\def\bullet{\leavevmode\raise .25ex\hbox{$\diamond$}\kern.5em}
+\newdimen\bulletSize
+\setbox0=\hbox{\bullet}
+\bulletSize=\wd0
+\advance\bulletSize by 3pt 
+\def\startExp#1#2#3{\rm{\sectionFont #1} \hfill {\it #2}\par\nobreak\vskip1pt\nobreak #3\par\nobreak\vskip2.5pt\nobreak\leftskip=0mm\parskip=1pt}
+\def\exp#1{\hangindent=\bulletSize\hangafter=1%Make sure the text lines up
+\bullet #1 \par}
+\def\endExp{\leftskip=0mm\parskip=0mm\vskip10pt}
+
+\def\description#1{{\rm #1}}
+
+
+% Header on each page with my information
+\def\pageHead{\hfil {\titleFont\name} \hfil
+\vskip 3pt
+\hrule 
+\vskip 5pt
+% Temporarily hide address
+%{\infoFont\addrone} \hfill {\infoFont\markupEmail{\email}}\par
+%{\infoFont\addrtwo} \hfill {\infoFont\phone}\par
+{\infoFont\phone} \hfill {\infoFont\markupEmail{\email}}\par
+\vskip 2pt}
+
+
+%Format differently for emailing (pdf) and printing (dvi)
+%to take advantages of the capabilities of different media
+\ifx\pdfoutput\undefined
+\def\markupEmail#1{#1}
+\pageHead
+\else
+%Use eplain and url and color packages
+%so we can nicely format email address
+\input eplain 
+\beginpackages
+  \usepackage{url}[2005/06/27]
+  \usepackage{color}
+\endpackages
+\enablehyperlinks
+\hlopts{bwidth=0}
+
+\def\markupEmail#1{\href{mailto:#1}{\textcolor{blue}{#1}}}
+
+\setbox100=\vbox{\pageHead}
+\topskip=\ht100
+\footline = {\tenrm\setbox0=\hbox{\ifx\finished\undefined\smallit Continued $\ldots$\else\relax\fi}\hfill%\folio\advancepageno\hskip-\wd0
+\hfill\box0}
+\output={\shipout\vbox{\vbox to 0pt{\vskip-22.5pt \pageHead} \pagebody \makefootline}}
+\fi
+
+
+%The body of the text
+\rm
+\vskip3pt
+\head{Objective}
+\vskip5pt
+\description{Use quantitative modelling and analysis to inform better business decisions}
+\vskip5pt
+
+%Improve decision making by transforming data into information. 
+
+
+
+
+\vskip5pt
+\head{Professional Experience}
+\vskip5pt
+
+\startExp{Haese Mathematics}{Aug 2011--April 2013}{Graduate Developer}
+\exp{Developed interactive applications in Java as part of a team}
+\exp{Designed and implemented quantitative algorithms}
+\exp{Produced multimedia demonstrations of mathematical procedures}
+\exp{Contributed to testing, maintenance, and documentation}
+%\exp{Maintained C++ code for a graphical application}
+%\exp{Prepared software packages for deployment}
+\endExp
+
+\startExp{Institute for Telecommunications Research}{Feb--July 2011}{Research intern}
+\exp{Implemented and analysed stochastic simulations in MATLAB}
+\exp{Presented and reported results of analyses to supervisor}
+\exp{Developed methods for generating and measuring complex networks}
+\endExp
+
+\startExp{Centre for Organic Photonics and Electronics}{Feb--Aug 2010}{Research student}
+\exp{Performed computational simulations of bulk materials}
+\endExp
+
+\vskip3pt
+\head{Education}
+\vskip5pt
+
+%\startExp{Independent education}{2013-present}{}
+%\exp{Distinction in Coursera Compilers course; implemented a compiler for an Object Oriented language}
+%\exp{Completed ungraded Data Structures and Algorithms course}
+%\endExp
+
+\startExp{First Class Honours in Pure Mathematics}{2008--2009}{University of Adelaide}
+\exp{University Medal for outstanding academic acheivement}
+\exp{Wazir Hasan and Amir Hasan Abdi Prize for highest grade in mathematics}
+\exp{Wrote a dissertation expositing a modern area of mathematics}
+\exp{Studied specialist courses such as Transform Methods and Signal Processing, and Distribution Theory}
+\endExp
+
+\startExp{Bachelor of Science (Physics and Theoretical Physics)}{2005--2007}{University of Adelaide}
+\exp{High distinction average (average grade 93\%)}
+\exp{Fred Jacka Memorial Prize for highest distinction in final year experimental physics}
+%\exp{Dean's Certificate of Merit for outstanding achievement in Physics I}
+\endExp
+
+\vfill \break 
+
+\head{Key Skills}
+\vskip5pt
+\startSkill
+\skill{Communication}{
+  I enjoy communicating technical concepts to people with a variety of backgrounds and thinking styles. At Haese Mathematics I produced multimedia for school students that uses visual and temporal methods to demonstrate mathematical techniques. I additionally helped produce problems and interactive demonstrations to illustrate, test, and practice concepts.
+
+ In a technical environment I strive to document all code, processes and models I produce so that others can understand, use, and improve on my work.
+ }
+\skill{Visual Basic for Applications and Excel}{
+  In my role at Haese Mathematics I used and helped produce automations of repetitive processes using Visual Basic for Applications, increasing production efficiency. I also worked directly with Excel spreadsheets to manage product data, and as part of the software building process.
+}
+\skill{Analysing and Presenting Data}{
+  My tertiary education in Physics and Mathematics is a solid foundation on the concepts of data analysis, quantitative model construction, and uncertainty and bias in data.
+
+  I have used tools such as Matlab, Python, and domain specific applications to produce simulations, analyse data, and present results. At Haese mathematics I contributed to the development, testing and improvement of user interfaces to applications.
+
+  I have undertaken independent study in algorithms and data structures, and understand their vital role in processing big data in a useful timeframe.
+}
+\skill{Software Development}{
+  At Haese Mathematics I worked in a team to produce and maintain dozens of end user applications, and a few internal software libraries. In this role I gained practical experience reinforcing importance of good design decisions, clear documentation, comprehensive unit testing, and source control. 
+
+  I continually improve my software development knowledge by reading books, learning to use different tools, and engaging with other developers. I strive to develop programs that meet their requirements (including factors such as reliability, efficiency, and usability) quickly.
+  
+  %I am aware of choosing the right tool for the job; Unix tools for many simple tasks, scripting languages for tasks that need to be done quickly, and languages with solid libraries for complex tasks.
+}
+\endSkill
+
+\def\finished{\relax}
+\vfill\eject
+
+\end
