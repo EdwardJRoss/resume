@@ -10,4 +10,4 @@ Edward_Ross.dvi : Edward_Ross.tex
 	tex Edward_Ross.tex
 
 clean :
-	rm Edward_Ross.ps Edward_Ross.pdf Edward_Ross.dvi
+	rm Edward_Ross.ps Edward_Ross.pdf Edward_Ross.dvi Edward_Ross.log
