@@ -48,6 +48,9 @@
 \def\description#1{{\rm #1}}
 
 
+\def\skilljump{\vskip2mm}
+
+
 % Header on each page with my information
 \def\pageHead{\hfil {\titleFont\name} \hfil
 \vskip 3pt
@@ -86,7 +89,8 @@
 \fi
 
 
-%The body of the text
+%The body of the text, below is a marker for toPandoc.py
+%%%BEGIN
 \rm
 \vskip3pt
 \head{Objective}
@@ -143,47 +147,45 @@
 
 \break 
 
-\def\skilljump{\vskip2mm}
-
 \head{Key Skills}
 \vskip5pt
 \startSkill
 \skill{Communication}
   I enjoy communicating technical concepts to people with a variety of backgrounds and thinking styles. 
   
- \skilljump
- \exp{Produced multimedia to demonstrate mathematical techniques}
- \exp{Designed dynamic tests targeted at pedagogical concepts}
- \exp{Document all processes and code to be reusable and comprehensible}
- \exp{Presented at the Melbourne Functional User Group}
- \exp{Tutored students in mathematics, physics, and computer science}
+\skilljump
+\exp{Produced multimedia to demonstrate mathematical techniques}
+\exp{Designed dynamic tests targeted at pedagogical concepts}
+\exp{Document all processes and code to be reusable and comprehensible}
+\exp{Presented at the Melbourne Functional User Group}
+\exp{Tutored students in mathematics, physics, and computer science}
 
 \skill{Visual Basic for Applications and Excel}
   Proficient at using tools such as Microsoft Excel and Visual Basic for Applications (VBA) to track and manage business data.
 
-  \skilljump
-  \exp{Increased production efficiency by automating processes using VBA}
-  \exp{Used Excel spreadsheets to manage product data}
-  \exp{Experienced with Excel formulas and macros}
+\skilljump
+\exp{Increased production efficiency by automating processes using VBA}
+\exp{Used Excel spreadsheets to manage product data}
+\exp{Experienced with Excel formulas and macros}
 
 \skill{Analysing and Presenting Data}
  Through my tertiary education and various roles I have experience producing numerical simulations, statistically analysing data, and presenting results.
 
-  \skilljump
-  \exp{Produced and configured simulations using Matlab and Java}
-  \exp{Analysed large quantities of data using Python and Matlab}
-  \exp{Contributed to developing, testing and improving user interfaces}
-  \exp{Independently studied algorithms and data structures}
+\skilljump
+\exp{Produced and configured simulations using Matlab and Java}
+\exp{Analysed large quantities of data using Python and Matlab}
+\exp{Contributed to developing, testing and improving user interfaces}
+\exp{Independently studied algorithms and data structures}
 
 \skill{Software Development}
 I continually strive to rapidly develop programs that are robust and user-friendly.
 
-  \skilljump
-  \exp{Worked in a team to produce and maintain dozens of applications}
-  \exp{Written hundreds of unit tests}
-  \exp{Always learning by reading books and using new tools}
-  \exp{Engage with other developers through Meetup groups}
-  \exp{Developed in Windows and Linux environments}
+\skilljump
+\exp{Worked in a team to produce and maintain dozens of applications}
+\exp{Written hundreds of unit tests}
+\exp{Always learning by reading books and using new tools}
+\exp{Engage with other developers through Meetup groups}
+\exp{Developed in Windows and Linux environments}
   
   
   %I am aware of choosing the right tool for the job; Unix tools for many simple tasks, scripting languages for tasks that need to be done quickly, and languages with solid libraries for complex tasks.
