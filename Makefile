@@ -7,7 +7,7 @@ Edward_Ross.md: Edward_Ross.tex
 Edward_Ross.docx: Edward_Ross.md
 	pandoc -s --smart Edward_Ross.md -o Edward_Ross.docx
 
-Edward_Ross.docx: Edward_Ross.md
+Edward_Ross.html: Edward_Ross.md
 	pandoc -s --smart Edward_Ross.md -o Edward_Ross.html
 
 Edward_Ross.pdf : Edward_Ross.ps
@@ -20,5 +20,4 @@ Edward_Ross.dvi : Edward_Ross.tex
 	tex Edward_Ross.tex
 
 clean :
-	rm Edward_Ross.ps Edward_Ross.pdf Edward_Ross.dvi Edward_Ross.log
-	rm Edward_Ross.md Edward_Ross.docx Edward_Ross.html
+	rm Edward_Ross.ps Edward_Ross.pdf Edward_Ross.dvi Edward_Ross.log Edward_Ross.md Edward_Ross.docx Edward_Ross.html

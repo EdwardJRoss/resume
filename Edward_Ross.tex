@@ -4,7 +4,7 @@
 \def\addrtwo{}
 \def\phone{0403 995 808}
 %Note cmr10 @ symbol looks funny; sits too high.
-\def\email{eddington.ross@gmail.com}
+\def\email{er@edwardross.id.au}
 
 %Font choices
 \font\bf = cmbx10 at 14pt
@@ -83,8 +83,9 @@
 
 \setbox100=\vbox{\pageHead}
 \topskip=\ht100
-\footline = {\tenrm\setbox0=\hbox{\ifx\finished\undefined\smallit Continued $\ldots$\else\relax\fi}\hfill%\folio\advancepageno\hskip-\wd0
-\hfill\box0}
+\footline{\tenrm\setbox0=\hbox{\folio\ of\ 2}\advancepageno\hfil\box0\hfil}
+%\footline = {\tenrm\setbox0=\hbox{\ifx\finished\undefined\smallit Continued $\ldots$\else\relax\fi}\hfill%\folio\advancepageno\hskip-\wd0
+%\hfill\box0}
 \output={\shipout\vbox{\vbox to 0pt{\vskip-22.5pt \pageHead} \pagebody \makefootline}}
 \fi
 
@@ -110,9 +111,9 @@
 \startExp{Haese Mathematics}{Aug 2011--Apr 2013}{Graduate Developer}
 \exp{Developed interactive applications in Java as part of a team}
 \exp{Designed and implemented quantitative algorithms}
-\exp{Produced multimedia demonstrations of mathematical procedures}
+\exp{Maintained and supported application C++ code}
 \exp{Contributed to testing, maintenance, and documentation}
-\exp{Maintained application C++ code}
+\exp{Produced multimedia demonstrations of mathematical procedures}
 %\exp{Prepared software packages for deployment}
 \endExp
 
@@ -159,6 +160,11 @@
 \exp{Document all processes and code to be reusable and comprehensible}
 \exp{Presented at the Melbourne Functional User Group}
 \exp{Tutored students in mathematics, physics, and computer science}
+
+\skill{Linux}
+\exp{Automated processes using shell scripts}
+\exp{Experienced with tools such as grep, sed, find}
+\exp{Installed and administrated personal workstations}
 
 \skill{Visual Basic for Applications and Excel}
   Proficient at using tools such as Microsoft Excel and Visual Basic for Applications (VBA) to track and manage business data.
