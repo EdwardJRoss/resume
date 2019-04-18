@@ -30,7 +30,7 @@
 
 %For skills
 \def\startSkill{\relax}
-\def\skill#1{\rm {\vskip10pt {\sectionFont #1}}\vskip6pt}
+\def\skill#1{\rm {\vskip20pt {\sectionFont #1}}\vskip6pt}
 \def\endSkill{\relax}
 
 %For education/academics: Bulleted lists
@@ -39,7 +39,7 @@
 \newdimen\bulletSize
 \setbox0=\hbox{\bullet}
 \bulletSize=\wd0
-\advance\bulletSize by 3pt 
+\advance\bulletSize by 3pt
 \def\startExp#1#2#3{\rm{\sectionFont #1} \hfill {\it #2}\par\nobreak\vskip1pt\nobreak #3\par\nobreak\vskip2.5pt\nobreak\leftskip=0mm\parskip=1pt}
 \def\exp#1{\hangindent=\bulletSize\hangafter=1%Make sure the text lines up
 \bullet #1 \par}
@@ -54,7 +54,7 @@
 % Header on each page with my information
 \def\pageHead{\hfil {\titleFont\name} \hfil
 \vskip 3pt
-\hrule 
+\hrule
 \vskip 5pt
 % Temporarily hide address
 %{\infoFont\addrone} \hfill {\infoFont\markupEmail{\email}}\par
@@ -71,7 +71,7 @@
 \else
 %Use eplain and url and color packages
 %so we can nicely format email address
-\input eplain 
+\input eplain
 \beginpackages
   \usepackage{url}[2005/06/27]
   \usepackage{color}
@@ -94,12 +94,12 @@
 %%%BEGIN
 \rm
 \vskip3pt
-\head{Objective}
-\vskip5pt
-\description{Use quantitative modelling and analysis to inform better business decisions}
-\vskip5pt
+%\head{Objective}
+%\vskip5pt
+%\description{Use quantitative modelling and analysis to inform better business decisions}
+%\vskip5pt
 
-%Improve decision making by transforming data into information. 
+%Improve decision making by transforming data into information.
 
 
 
@@ -108,14 +108,22 @@
 \head{Professional Experience}
 \vskip5pt
 
-\startExp{Hitwise}{Nov 2014--Present}{Data Modeller/Engineer}
+
+\startExp{Carsales.com}{Sep 2017--Present}{Data Analyst}
+% Predictions and recommendations?
+\exp{Created market segments using clustering}
+\exp{Extracted seasonality and trends from time series}
+\exp{Built campaign reporting using Google Analytics, Bigquery and Tableau}
+\endExp
+
+\startExp{Hitwise}{Nov 2014--Sep 2017}{Data Modeller/Engineer}
 % Hourly Data, Bounce Rate, Seek Scraping, Amazon, Daily Mail from Facebook
 \exp{Designed scores of bespoke reports with Sales Analysts}
 \exp{Extracted and transformed terabytes of data using Hadoop, Python and Greenplum}
-\exp{Performed analyses and provided visualisations using R and Tableau}
 \exp{Integrated external data sources and imputed missing data using R}
 \exp{Documented methodology and tools and trained five new Data Engineers}
 \exp{Discovered and helped resolve data anomalies and implementation errors}
+\endExp
 
 \startExp{Haese Mathematics}{Aug 2011--Apr 2013}{Graduate Developer}
 \exp{Developed interactive applications in Java and Lua as part of a team}
@@ -127,7 +135,7 @@
 \endExp
 
 \startExp{Institute for Telecommunications Research}{Feb--Jul 2011}{Research intern}
-\exp{Implemented and analysed stochastic simulations of complex networks in MATLAB}
+\exp{Implemented stochastic simulations of complex networks in MATLAB}
 %\exp{Presented and reported results of analyses}
 %\exp{Developed methods for generating and measuring complex networks}
 \endExp
@@ -139,7 +147,7 @@
 \startExp{First Class Honours in Pure Mathematics}{2008--2009}{University of Adelaide}
 \exp{University Medal for outstanding academic achievement}
 \exp{Wazir Hasan and Amir Hasan Abdi Prize for highest grade in mathematics}
-\exp{Wrote a dissertation expositing a modern area of mathematics}
+%\exp{Wrote a dissertation expositing a modern area of mathematics}
 \exp{Studied specialist courses such as Transform Methods and Signal Processing and Distribution Theory}
 \endExp
 
@@ -149,42 +157,48 @@
 %\exp{Dean's Certificate of Merit for outstanding achievement in Physics I}
 \endExp
 
-\vfill 
+\vfill
 
-\break 
+\break
 
 \head{Key Skills}
-\vskip5pt
+\vskip20pt
 \startSkill
 
+\skill{Data Analysis}
+ I have a passion for exploring data, discovering relationships, building models and finding actionable insights.
+
+\skilljump
+\exp{Reported on sequential behaviour of behavioural and demographic segments using Bigquery, Hadoop and Greenplum}
+\exp{Built interactive clustering tool for producing market semgents using R and Shiny}
+\exp{Performed geospatial searching using Simple Features for R}
+\exp{Implemented survival model predicting order of events for intervention}
+%\exp{Produced and configured simulations using MATLAB and Java}
+%\exp{Independently studied algorithms and data structures}
 
 \skill{Communication}
-  I enjoy communicating technical concepts to people with a variety of backgrounds and thinking styles. 
-  
+  I enjoy communicating technical concepts to people with a variety of backgrounds and thinking styles.
+
 \skilljump
 %% MORE
-\exp{Developed and communicated technical solutions with clients and analysts at Hitwise}
+\exp{Developed and communicated technical solutions with clients and analysts at Hitwise and Carsales}
 \exp{Coordinate the Melbourne Maths and Science Meetup}
 \exp{Presented at the Melbourne Functional Meetup Group, and Clojure meetup group}
-\exp{Produced multimedia to demonstrate mathematical techniques at Haese}
+%\exp{Produced multimedia to demonstrate mathematical techniques at Haese}
+\exp{Produced data visualisations using ggplot, matplotlib and Tableau}
+\exp{Won HealthHack 2016 on team Morgana developing data visualisation using Python and d3.js}
 %\exp{Designed dynamic tests targeted at pedagogical concepts}
 %\exp{Document all processes and code to be reusable and comprehensible}
-\exp{Tutored students in mathematics, physics and computer science}
+%\exp{Tutored students in mathematics, physics and computer science}
 
-\skill{Analysing and Presenting Data}
- I have experience producing numerical simulations, statistically analysing data and presenting results.
-
-\skilljump
-\exp{Reported on integrity and bias of data sources to management at Hitwise}
-\exp{Won HealthHack 2016 on team Morgana developing data visualisation using Python and d3.js}
-\exp{Produced data visualisations using ggplot, maplotlib and Tableau}
-\exp{Produced and configured simulations using MATLAB and Java}
-\exp{Independently studied algorithms and data structures}
 
 \skill{Extracting and Processing Data}
-\exp{Extracted and transformed data from HDFS, Greenplum, Excel, REST APIs, HTML and Javascript}
+ I have a wide range of experience getting data from almost anywhere into a format usable for analysis.
+
+\skilljump
+\exp{Extracted and transformed data from HDFS, SQL, Excel, REST APIs, HTML and Javascript}
 \exp{Cleaned, assessed and integrated supplementary data sources}
-\exp{Designed and implemented ETL pipelines into PostgreSQL databases backing web interfaces}
+\exp{Designed, implemented and monitored simple ETL pipelines}
 
 \skill{Software Development}
 I continually strive to develop agile software solutions to meet customer needs.
@@ -192,20 +206,21 @@ I continually strive to develop agile software solutions to meet customer needs.
 \skilljump
 \exp{Worked in a team at Haese to produce and maintain dozens of applications}
 \exp{Written and maintained dozens of bespoke reports using Python and Pandas}
+\exp{Maintained and performed code review for internal Python libraries at Hitwise}
 \exp{Written programs for processing terabytes of data with Hadoop, Pig and Hive at Hitwise}
 %\exp{Engage with other developers through Meetup groups}
 %\exp{Developed in Windows and Linux environments}
-  
-  
+
+
   %I am aware of choosing the right tool for the job; Unix tools for many simple tasks, scripting languages for tasks that need to be done quickly and languages with solid libraries for complex tasks.
 
 
-\skill{Linux}
-\exp{Extensively used bash scripts to automate simple processes at Hitwise}
-\exp{Familiarity with package management as well as installing from source}
-\exp{Experienced with utilities such as grep, sed and find}
-\exp{Basic understanding of process scheduling, monitoring and management}
-\exp{ITIL Foundation Certification}
+%\skill{Linux}
+%\exp{Extensively used bash scripts to automate simple processes at Hitwise}
+%\exp{Familiarity with package management as well as installing from source}
+%\exp{Experienced with utilities such as grep, sed and find}
+%\exp{Basic understanding of process scheduling, monitoring and management}
+%\exp{ITIL Foundation Certification}
 
 
 \endSkill
