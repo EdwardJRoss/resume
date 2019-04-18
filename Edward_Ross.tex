@@ -40,10 +40,11 @@
 \setbox0=\hbox{\bullet}
 \bulletSize=\wd0
 \advance\bulletSize by 3pt
-\def\startExp#1#2#3{\rm{\sectionFont #1} \hfill {\it #2}\par\nobreak\vskip1pt\nobreak #3\par\nobreak\vskip2.5pt\nobreak\leftskip=0mm\parskip=1pt}
+\def\startExp#1#2#3{\rm{\sectionFont #1} \hfill {#2}\par\nobreak\vskip1pt\nobreak #3\par\nobreak\vskip2.5pt\nobreak\leftskip=0mm\parskip=1pt}
 \def\exp#1{\hangindent=\bulletSize\hangafter=1%Make sure the text lines up
+\vskip1pt
 \bullet #1 \par}
-\def\endExp{\leftskip=0mm\parskip=0mm\vskip10pt}
+\def\endExp{\leftskip=0mm\parskip=0mm\vskip16pt}
 
 \def\description#1{{\rm #1}}
 
@@ -104,32 +105,54 @@
 
 
 
-\vskip5pt
+\vskip3pt
 \head{Professional Experience}
 \vskip5pt
 
+\startExp{SEEK}{Jul 2018--Present}{Senior Data Analyst}
+In the Digital Analytics team I work with product teams to track and improve products using data driven insights.
+\skilljump
+\exp{Developed new product health metrics with Product Manager to better understand product growth}
+\exp{Designed data process and experimental method that proved a method to help hirers improve ad performance}
+\exp{Analysed Jora Local's impact on SEEK's hospitality marketplace, showing increased ad share led to increased candidate attention}
+\exp{Identified words that led to Company Reviews being blocked to provide immediate feedback to reviewers}
+\endExp
 
-\startExp{Carsales.com}{Sep 2017--Present}{Data Analyst}
+\startExp{Carsales.com}{Sep 2017--Jul 2018}{Data Analyst}
+Carsales.com is the largest online automotive classified business in Australia.
+In the Commercial Insights team I helped Sales, Media and Product teams use data and analytics to make better business decisions.
+\skilljump
 % Predictions and recommendations?
-\exp{Created market segments using clustering}
-\exp{Extracted seasonality and trends from time series}
-\exp{Built campaign reporting using Google Analytics, Bigquery and Tableau}
+\exp{Built a reporting tool using HyperLogLog in BigQuery and Tableau that enabled Ad Operations and Media Sales teams to self-serve campaign reports in a flexible and efficient way.}
+\exp{Created improved business customer segments using decision trees which were adopted to better target products and sales teams}
+\exp{Built process to extract trends from economic indicators impacting the business}
+\exp{Created customer segments using clustering of survey data for marketing materials}
+
 \endExp
 
-\startExp{Hitwise}{Nov 2014--Sep 2017}{Data Modeller/Engineer}
+\startExp{Hitwise}{Nov 2014--Sep 2017}{Data Engineer}
+Hitwise is a competitive intelligence service providing insights to marketers on how consumers act online.
+In the Data Engineering team I worked with Research Analysts across Australia, the UK and the US to scope and prepare scores of bespoke reports for clients.
+\skilljump
 % Hourly Data, Bounce Rate, Seek Scraping, Amazon, Daily Mail from Facebook
-\exp{Designed scores of bespoke reports with Sales Analysts}
-\exp{Extracted and transformed terabytes of data using Hadoop, Python and Greenplum}
-\exp{Integrated external data sources and imputed missing data using R}
-\exp{Documented methodology and tools and trained five new Data Engineers}
-\exp{Discovered and helped resolve data anomalies and implementation errors}
+\exp{Designed ETL pipeline using Greenplum and Python to enable hourly reporting (from daily) which led to large sales opportunities in Media Clients}
+\exp{Integrated external data sources to deliver new opportunities in Media, eCommerce, Sports and Aviation industries}
+\exp{Improved Python reporting libraries enabling self-service of common reports and improved efficiency of building bespoke reports}
+%\exp{Maintained scheduled reporting system and Python libraries}
+\exp{Involved in training, onboarding and mentoring five new Data Engineers}
+\exp{Extracted reporting insights from processing terabytes of data using Hadoop}
+
 \endExp
 
-\startExp{Haese Mathematics}{Aug 2011--Apr 2013}{Graduate Developer}
-\exp{Developed interactive applications in Java and Lua as part of a team}
-\exp{Designed and implemented quantitative algorithms}
-\exp{Maintained and supported application C++ code}
-\exp{Contributed to testing, maintenance and documentation}
+\startExp{Haese Mathematics}{Aug 2011--Apr 2013}{Developer}
+Haese Mathematics is a family-owned publishing company specialising in Mathematics textbooks and accompanying software.
+In the software development team I created interactive demos for students and automated test generators for teachers.
+\skilljump
+
+\exp{Developed Java and Lua applications to enrich student learning and help teachers}
+\exp{Designed and implemented algorithms to automatically solve and optimise equations to support software applications}
+%\exp{Maintained and supported application C++ code}
+\exp{Contributed to testing, maintaining and deploying code}
 %\exp{Produced multimedia demonstrations of mathematical procedures}
 %\exp{Prepared software packages for deployment}
 \endExp
@@ -141,89 +164,32 @@
 \endExp
 
 \vskip3pt
+\head{Other Experience}
+\startSkill
+\vskip-20pt
+
+\skill{}
+\exp{Coordinate the Melbourne Maths and Science Meetup (2017--present). Organise speakers, communicate with members and sponsors, and facilitate}
+\exp{Built a web app (whatcar.xyz, 2018) that can classify photographs 400 different makes and models of Australian cars with 50\% accuracy}
+\exp{Top 20\% in Kaggle Research Competition on Multilabel Image Classification in 2018 using Convolutional Neural Networks}
+\exp{Won Melbourne HealthHack 2016 on team Morgana to develop data visualisation of clinical data using Python and d3.js}
+%\exp{Presented talks at the Melbourne Functional Meetup Group, and Clojure meetup groups in 2013}
+\endSkill
+
+
+\vskip13pt
 \head{Education}
-\vskip5pt
+\vskip7pt
 
 \startExp{First Class Honours in Pure Mathematics}{2008--2009}{University of Adelaide}
 \exp{University Medal for outstanding academic achievement}
 \exp{Wazir Hasan and Amir Hasan Abdi Prize for highest grade in mathematics}
-%\exp{Wrote a dissertation expositing a modern area of mathematics}
-\exp{Studied specialist courses such as Transform Methods and Signal Processing and Distribution Theory}
 \endExp
 
 \startExp{Bachelor of Science (Physics and Theoretical Physics)}{2005--2007}{University of Adelaide}
 \exp{High distinction average (average grade 93\%)}
 \exp{Fred Jacka Memorial Prize for highest distinction in final year experimental physics}
-%\exp{Dean's Certificate of Merit for outstanding achievement in Physics I}
 \endExp
-
-\vfill
-
-\break
-
-\head{Key Skills}
-\vskip20pt
-\startSkill
-
-\skill{Data Analysis}
- I have a passion for exploring data, discovering relationships, building models and finding actionable insights.
-
-\skilljump
-\exp{Reported on sequential behaviour of behavioural and demographic segments using Bigquery, Hadoop and Greenplum}
-\exp{Built interactive clustering tool for producing market semgents using R and Shiny}
-\exp{Performed geospatial searching using Simple Features for R}
-\exp{Implemented survival model predicting order of events for intervention}
-%\exp{Produced and configured simulations using MATLAB and Java}
-%\exp{Independently studied algorithms and data structures}
-
-\skill{Communication}
-  I enjoy communicating technical concepts to people with a variety of backgrounds and thinking styles.
-
-\skilljump
-%% MORE
-\exp{Developed and communicated technical solutions with clients and analysts at Hitwise and Carsales}
-\exp{Coordinate the Melbourne Maths and Science Meetup}
-\exp{Presented at the Melbourne Functional Meetup Group, and Clojure meetup group}
-%\exp{Produced multimedia to demonstrate mathematical techniques at Haese}
-\exp{Produced data visualisations using ggplot, matplotlib and Tableau}
-\exp{Won HealthHack 2016 on team Morgana developing data visualisation using Python and d3.js}
-%\exp{Designed dynamic tests targeted at pedagogical concepts}
-%\exp{Document all processes and code to be reusable and comprehensible}
-%\exp{Tutored students in mathematics, physics and computer science}
-
-
-\skill{Extracting and Processing Data}
- I have a wide range of experience getting data from almost anywhere into a format usable for analysis.
-
-\skilljump
-\exp{Extracted and transformed data from HDFS, SQL, Excel, REST APIs, HTML and Javascript}
-\exp{Cleaned, assessed and integrated supplementary data sources}
-\exp{Designed, implemented and monitored simple ETL pipelines}
-
-\skill{Software Development}
-I continually strive to develop agile software solutions to meet customer needs.
-
-\skilljump
-\exp{Worked in a team at Haese to produce and maintain dozens of applications}
-\exp{Written and maintained dozens of bespoke reports using Python and Pandas}
-\exp{Maintained and performed code review for internal Python libraries at Hitwise}
-\exp{Written programs for processing terabytes of data with Hadoop, Pig and Hive at Hitwise}
-%\exp{Engage with other developers through Meetup groups}
-%\exp{Developed in Windows and Linux environments}
-
-
-  %I am aware of choosing the right tool for the job; Unix tools for many simple tasks, scripting languages for tasks that need to be done quickly and languages with solid libraries for complex tasks.
-
-
-%\skill{Linux}
-%\exp{Extensively used bash scripts to automate simple processes at Hitwise}
-%\exp{Familiarity with package management as well as installing from source}
-%\exp{Experienced with utilities such as grep, sed and find}
-%\exp{Basic understanding of process scheduling, monitoring and management}
-%\exp{ITIL Foundation Certification}
-
-
-\endSkill
 
 \def\finished{\relax}
 \vfill\eject
