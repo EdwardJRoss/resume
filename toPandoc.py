@@ -19,7 +19,7 @@ description = getTex('description', 1)
 skill = getTex('skill', 1) 
 #Very simple macros; practical if not correct
 macro = re.compile('\\\\[a-zA-Z]+[^\s]*')
-comment = re.compile('%[^\n]*')
+comment = re.compile('(?<!\\\\)%[^\n]*')
 
 excessNewlines = re.compile('(\n\s*)+\n(\s*)')
 
