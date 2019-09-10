@@ -5,13 +5,13 @@ Edward_Ross.md: Edward_Ross.tex
 	python toPandoc.py > Edward_Ross.md
 
 Edward_Ross.docx: Edward_Ross.md
-	pandoc -s --smart Edward_Ross.md -o Edward_Ross.docx
+	pandoc -s -f markdown+smart Edward_Ross.md -o Edward_Ross.docx
 
 Edward_Ross.odt: Edward_Ross.md
-	pandoc -s --smart Edward_Ross.md -o Edward_Ross.odt
+	pandoc -s -f markdown+smart Edward_Ross.md -o Edward_Ross.odt
 
 Edward_Ross.html: Edward_Ross.md
-	pandoc -s --smart Edward_Ross.md -o Edward_Ross.html
+	pandoc -s -f markdown+smart --metadata pagetitle='Edward Ross' Edward_Ross.md -o Edward_Ross.html
 
 Edward_Ross.pdf : Edward_Ross.ps
 	ps2pdf Edward_Ross.ps
