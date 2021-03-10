@@ -40,7 +40,10 @@
 \setbox0=\hbox{\bullet}
 \bulletSize=\wd0
 \advance\bulletSize by 3pt
-\def\startExp#1#2#3{\rm{\sectionFont #1} \hfill {#2}\par\nobreak\vskip1pt\nobreak #3\par\nobreak\vskip2.5pt\nobreak\leftskip=0mm\parskip=1pt}
+\def\expTitle#1{\rm{\sectionFont #1}\par\nobreak}
+\def\expRole#1#2{\vskip1pt\nobreak #2 \hfill {#1}\par\nobreak}
+\def\expContent{\vskip3.5pt\nobreak\leftskip=0mm\parskip=1pt}
+\def\startExp#1#2#3{\expTitle{#1}\expRole{#2}{#3}\expContent}
 \def\exp#1{\hangindent=\bulletSize\hangafter=1%Make sure the text lines up
 \vskip1pt
 \bullet #1 \par}
