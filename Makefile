@@ -1,9 +1,10 @@
 all: Edward_Ross.pdf
+pdf: Edward_Ross.pdf
 doc: Edward_Ross.odt
 html: Edward_Ross.html
 
 Edward_Ross.md: Edward_Ross.tex
-	python toPandoc.py > Edward_Ross.md
+	python3 toPandoc.py > Edward_Ross.md
 
 Edward_Ross.docx: Edward_Ross.md
 	pandoc -s -f markdown+smart Edward_Ross.md -o Edward_Ross.docx
