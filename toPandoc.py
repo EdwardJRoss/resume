@@ -17,6 +17,8 @@ startExp = getTex('startExp', 3)
 exp = getTex('exp', 1)
 description = getTex('description', 1)
 skill = getTex('skill', 1) 
+expTitle = getTex('expTitle', 1)
+expRole = getTex('expRole', 2)
 #Very simple macros; practical if not correct
 macro = re.compile('\\\\[a-zA-Z]+[^\s]*')
 comment = re.compile('(?<!\\\\)%[^\n]*')
@@ -38,7 +40,9 @@ txt = txt[start:]
 
 #Convert to Markdown
 txt = head.sub('## \\1', txt)
-txt = startExp.sub("### \\1 -- \\3\n#### \\2", txt)
+txt = startExp.sub("### \\1\n#### \\2 -- \\3", txt)
+txt = expTitle.sub('### \\1', txt)
+txt = expRole.sub('#### \\1 -- \\2', txt)
 txt = description.sub("\n\\1", txt)
 txt = exp.sub('  * \\1', txt)
 txt = skill.sub('### \\1', txt)
