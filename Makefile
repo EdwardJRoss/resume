@@ -1,5 +1,6 @@
 all: Edward_Ross.pdf
 doc: Edward_Ross.odt
+html: Edward_Ross.html
 
 Edward_Ross.md: Edward_Ross.tex
 	python toPandoc.py > Edward_Ross.md
