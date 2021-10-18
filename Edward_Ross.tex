@@ -3,6 +3,7 @@
 \def\addrone{}
 \def\addrtwo{}
 \def\github{github.com/EdwardJRoss/}
+\def\githuburl{https://github.com/EdwardJRoss/}
 \def\phone{0403 995 808}
 %Note cmr10 @ symbol looks funny; sits too high.
 \def\email{edward@skeptric.com}
@@ -66,7 +67,7 @@
 %{\infoFont\addrone} \hfill {\infoFont\markupEmail{\email}}\par
 %{\infoFont\addrtwo} \hfill {\infoFont\phone}\par
 {\infoFont\phone} \hfill {\infoFont\markupEmail{\email}}\par
-{\infoFont\github} \hfill {\infoFont\website}\par
+{\infoFont\markupLink{\github}{\githuburl}} \hfill {\infoFont\markupLink{\website}{\website}}\par
 \vskip 2pt}
 
 
@@ -87,6 +88,8 @@
 \hlopts{bwidth=0}
 
 \def\markupEmail#1{\href{mailto:#1}{\textcolor{blue}{#1}}}
+
+\def\markupLink#1#2{\href{#2}{\textcolor{blue}{#1}}}
 
 \setbox100=\vbox{\pageHead}
 \topskip=\ht100
@@ -121,17 +124,16 @@
 \expRole{Jul 2018--Aug 2019}{Senior Data Analyst}
 \expContent
 SEEK is a leading digital jobs marketplace in 14 countries across Asia and South America.
-Initially worked as an analyst in a cross-functional team building insights products, before becoming the Data Science Lead for Pricing working with Data Scientists, Engineers and an AI Product Manager.
-%In the Analytics team I worked with product teams to improve their products using data driven insights.
+I am working as Data Science Lead for Pricing in a cross-functional team from formulating data driven solutions to commercial problems, to building production machine learning pipelines through to testing and communicating results of changes to stakeholders.
 \skilljump
-\exp{Worked with Commercial Strategy to design and implement value based pricing of ad products}
+\exp{Worked with Commercial Strategy to design and implement data driven pricing of ad products}
 \exp{Created clusters of similar roles using community detection to improve marketplace reporting}
-\exp{Maintained and operated pipeline for calculating the value of roles and assigning prices}
-\exp{Expanded service to classify job titles to South East Asian markets}
-\exp{Worked with product managers to prioritise product opportunities based on usage data}
+\exp{Improved bespoke decision tree regression solution to estimate job salary}
+\exp{Trained production FastText models to classify job titles across 6 countries}
+\exp{Implemented production system to detect duplicates using MinHash}
 \exp{Designed and ran experiments on nudging users to improve their ads}
-%\exp{Implemented production system to detect duplicates using MinHash}
-%\exp{Mentored four analysts in stakeholder management, statistics and machine learning}
+%\exp{Worked with product managers to prioritise product opportunities based on usage data}
+\exp{Mentored four analysts in stakeholder management, statistics and machine learning}
 \endExp
 
 \startExp{Carsales.com}{Sep 2017--Jul 2018}{Data Analyst}
@@ -141,8 +143,8 @@ In the Commercial Insights team I helped Sales, Media and Product teams use data
 % Predictions and recommendations?
 \exp{Built a reporting tool using HyperLogLog in BigQuery and Tableau that enabled Ad Operations and Media Sales teams to self-serve campaign reports in a flexible and efficient way.}
 \exp{Created improved business customer segments using decision trees which were adopted to better target products and sales teams}
-\exp{Built process to extract trends from relevant economic indicators impacting the business}
-\exp{Created customer segments using clustering of survey data for marketing materials}
+\exp{Built Python pipeline to extract trends from relevant economic indicators impacting the business}
+\exp{Created customer segments in R using K-medoids clustering of survey data for marketing materials}
 
 \endExp
 
@@ -151,10 +153,10 @@ Hitwise was a competitive intelligence service providing insights to marketers o
 In the Data Engineering team I worked with Research Analysts across Australia, the UK and the US to scope and prepare scores of bespoke reports for clients.
 \skilljump
 % Hourly Data, Bounce Rate, Seek Scraping, Amazon, Daily Mail from Facebook
-\exp{Designed ETL pipeline using Greenplum and Python to enable hourly reporting (from daily) which led to large sales opportunities in Media Clients}
-\exp{Integrated external data sources to deliver new opportunities in Media, eCommerce, Sports and Aviation industries}
+%\exp{Designed ETL pipeline using Greenplum and Python to enable hourly reporting (from daily) which led to large sales opportunities in Media Clients}
+%\exp{Integrated external data sources to deliver new opportunities in Media, eCommerce, Sports and Aviation industries}
 \exp{Improved Python reporting libraries enabling self-service of common reports and improved efficiency of building bespoke reports}
-%\exp{Maintained scheduled reporting system and Python libraries}
+\exp{Maintained scheduled reporting system and Python libraries}
 \exp{Involved in training, onboarding and mentoring five new Data Engineers}
 \exp{Extracted reporting insights from processing terabytes of data using Hadoop}
 
@@ -162,19 +164,19 @@ In the Data Engineering team I worked with Research Analysts across Australia, t
 
 \startExp{Haese Mathematics}{Aug 2011--Apr 2013}{Developer}
 Haese Mathematics is a family-owned publishing company specialising in Mathematics textbooks and accompanying software.
-In the software development team I created interactive demos for students and automated test generators for teachers.
+In the software development team I created interactive demonstrations for students and automated test generators for teachers.
 \skilljump
 
-\exp{Developed Java and Lua applications to enrich student learning and help teachers}
-\exp{Designed and implemented algorithms to automatically solve and optimise equations to support software applications}
+%\exp{Developed and maintained Java applications to enrich student learning and help teachers}
+%\exp{Designed and implemented algorithms to automatically solve and optimise equations to support software applications}
 %\exp{Maintained and supported application C++ code}
-\exp{Contributed to testing, maintaining and deploying code}
+%\exp{Contributed to testing, maintaining and deploying code}
 %\exp{Produced multimedia demonstrations of mathematical procedures}
 %\exp{Prepared software packages for deployment}
 \endExp
 
-%\startExp{Institute for Telecommunications Research}{Feb--Jul 2011}{Research intern}
-%\exp{Implemented stochastic simulations of complex networks in MATLAB}
+\startExp{Institute for Telecommunications Research}{Feb--Jul 2011}{Research intern}
+Implemented stochastic simulations of complex networks in MATLAB.
 %\exp{Presented and reported results of analyses}
 %\exp{Developed methods for generating and measuring complex networks}
 \endExp
